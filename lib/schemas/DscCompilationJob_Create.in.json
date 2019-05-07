@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90,
+            "pattern": "^[-\\w\\._]+$"
+        },
+        "automationAccountName": {
+            "required": true,
+            "type": "string"
+        },
+        "compilationJobName": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The parameters supplied to the create compilation job operation.",
+            "properties": {
+                "location": {
+                    "description": "Gets or sets the location of the resource.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Gets or sets name of the resource.",
+                    "type": "string"
+                },
+                "properties": {
+                    "description": "Gets or sets the list of compilation job properties.",
+                    "x-ms-client-flatten": true,
+                    "properties": {
+                        "configuration": {
+                            "description": "Gets or sets the configuration.",
+                            "properties": {
+                                "name": {
+                                    "description": "Gets or sets the name of the Dsc configuration.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "incrementNodeConfigurationBuild": {
+                            "description": "If a new build version of NodeConfiguration is required.",
+                            "type": "boolean"
+                        },
+                        "parameters": {
+                            "additionalProperties": {
+                                "type": "string"
+                            },
+                            "description": "Gets or sets the parameters of the job.",
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "configuration"
+                    ]
+                },
+                "tags": {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Gets or sets the tags attached to the resource.",
+                    "type": "object"
+                }
+            },
+            "required": [
+                "properties"
+            ],
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
