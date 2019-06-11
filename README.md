@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AutomationManagement API (version 2018-01-15).
 
 Generated from: https://api.apis.guru/v2/specs/azure.com/automation-dscCompilationJob/2018-01-15/swagger.json<br/>
-Generated at: 2019-05-07T17:37:19+03:00
+Generated at: 2019-06-11T18:13:22+03:00
 
 ## API Description
 
